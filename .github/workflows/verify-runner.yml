@@ -1,0 +1,14 @@
+name: Self-Hosted Runner Validation
+
+on: [push]
+
+jobs:
+  runner-validation:
+    runs-on: self-hosted
+    steps:
+      - name: Display Runner Information
+        run: |
+          echo "Validating self-hosted runner environment"
+          uname -a
+          hostname
+          env | grep GITHUB_REPO
